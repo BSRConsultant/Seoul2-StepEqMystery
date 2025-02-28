@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Mystery Game - Stray Kids Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="level-info">
+            <span id="level-display">Level 1</span>
+            <span id="score-display">Score: 0</span>
+        </div>
+
+        <div id="story-context">
+            <!-- Story context will be dynamically updated here -->
+        </div>
+
+        <div id="equation-container">
+            <div id="equation-text"></div>
+            <div class="input-hint">Enter your answer:</div>
+            <input type="number" id="answer-input" placeholder="?" step="any">
+            <div id="feedback" class="hidden"></div>
+            <button id="submit-btn">Submit</button>
+            <button id="hint-btn">Get Hint</button>
+        </div>
+
+        <div id="final-puzzle" class="hidden">
+            <h2>Final Puzzle</h2>
+            <div id="final-puzzle-content"></div>
+            <input type="number" id="final-answer" placeholder="Enter final code">
+            <button id="final-submit">Submit Code</button>
+        </div>
+
+        <div id="stats" class="hidden">
+            <h3>Your Progress</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-label">Equations Solved:</span>
+                    <span id="equations-solved">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Success Rate:</span>
+                    <span id="success-rate">0%</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Hints Used:</span>
+                    <span id="hints-used">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Average Time:</span>
+                    <span id="avg-time">0s</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button id="toggle-stats">Show Stats</button>
+            <button id="toggle-sound">🔊 Sound On</button>
+        </div>
+    </div>
+
+    <script src="game-data.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
